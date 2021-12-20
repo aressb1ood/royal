@@ -2214,7 +2214,7 @@ class mainCog(commands.Cog):
 								hours, remainder = divmod(total_seconds,60*60)
 								minutes, seconds = divmod(remainder,60)
 
-								result_lefttime += ' - ' + tmp_bossTime[i].strftime('%Y-%m-%d') + ' @ ' + tmp_bossTime[i].strftime('%H:%M:%S') + ' : ' + bossData[i][0] + bossData[i][6] + '\n'
+								result_lefttime += ' - ' + tmp_bossTime[i].strftime('%Y-%m-%d') + ' @ ' + tmp_bossTime[i].strftime('%H:%M:%S') + ' : ' + bossData[i][0] + ' (미입력 ' + str(bossMungCnt[i]) + '회)' + bossData[i][6] + '\n'
 				else :
 					for j in range(len(sorted_datelist)):
 						for i in range(len(ouput_bossData)):						
@@ -2225,10 +2225,10 @@ class mainCog(commands.Cog):
 								hours, remainder = divmod(total_seconds,60*60)
 								minutes, seconds = divmod(remainder,60)
 
-								result_lefttime += ' - ' + tmp_bossTime[i].strftime('%Y-%m-%d') + ' @ ' + tmp_bossTime[i].strftime('%H:%M:%S') + ' : ' + bossData[i][0] + bossData[i][6] + '\n'
+								result_lefttime += ' - ' + tmp_bossTime[i].strftime('%Y-%m-%d') + ' @ ' + tmp_bossTime[i].strftime('%H:%M:%S') + ' : ' + bossData[i][0] + ' (멍 ' + str(bossMungCnt[i]) + '회)' + bossData[i][6] + '\n'
 				embed = discord.Embed(
 					description= result_lefttime,
-					color=0xff0000
+					color=0x0000ff
 					)
 				await ctx.send( embed=embed, tts=False)
 		else:
