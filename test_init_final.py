@@ -2228,7 +2228,7 @@ class mainCog(commands.Cog):
 								result_lefttime += '다음 ' + ouput_bossData[i][0] + '탐까지 %02d:%02d:%02d 남았습니다. ' % (hours,minutes,seconds) + '[' +  ouput_bossData[i][2] + ']\n'
 				embed = discord.Embed(
 					description= result_lefttime,
-					color=0x0000ff
+					color=0xff00ff
 					)
 				await ctx.send( embed=embed, tts=False)
 		else:
